@@ -25,31 +25,32 @@ bird-shape {
 
 bird-face {
   margin-top: 85px;
-  height: 13vh;
-  width: 52%;
+  height: 100px;
+  margin-left: 15%;
+  width: 80%;
 }
 
 bird-face {
-  animation-duration: 12s;
-  animation-name: face;
-  animation-iteration-count: infinite;
 }
 
 @keyframes face {
   from {
-    margin-left: 39%;
-  }
-  50% {
     margin-left: 30%;
   }
+  50% {
+    margin-left: 20%;
+  }
   to {
-    margin-left: 39%;
+    margin-left: 30%;
   }
 }
 
 bird-eyes {
-  height: 10vw;
-
+  animation-duration: 12s;
+  animation-name: face;
+  animation-iteration-count: infinite;
+  height: 50px;
+  width: 70%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -57,8 +58,8 @@ bird-eyes {
   align-items: center;
 }
 bird-eyes > * {
-  width: 4vw;
-  height: 4vw;
+  width: 20px;
+  height: 20px;
 
   position: relative;
   background-color: #333;
@@ -85,22 +86,27 @@ bird-eye-right {
 
 @keyframes blink {
   from {
-    height: 4vw;
+    height: 20px;
   }
   74% {
-    height: 4vw;
+    height: 20px;
   }
   89% {
-    height: 0.2vw;
+    height: 4px;
   }
   to {
-    height: 4vw;
+    height: 20px;
   }
 }
 bird-chin {
   /* border: 1px solid green; */
   display: flex;
   justify-content: center;
+
+  width: 70%;
+  animation-duration: 12s;
+  animation-name: face;
+  animation-iteration-count: infinite;
 }
 bird-mouth {
   /* border: 1px solid red; */
@@ -161,17 +167,35 @@ bird-right-wing {
   z-index: -1;
 }
 
-/* bird-feet {
+bird-feet-left {
   display: block;
   position: absolute;
-  top: 240px;
-  height: 40px;
-  width: 10px;
+  top: 299px;
+  left: 147px;
+  height: 42px;
+  width: 5px;
   background-color: black;
   display: block;
-} */
+  box-shadow: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
 
-bird-feet {
+bird-feet-right {
+  display: block;
+  position: absolute;
+  top: 299px;
+  left: 230px;
+  height: 42px;
+  width: 5px;
+  background-color: black;
+  display: block;
+  box-shadow: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* bird-feet {
   display: block;
   position: fixed;
   top: 305px;
@@ -182,33 +206,77 @@ bird-feet {
   border-right: 5px solid black;
   display: block;
   box-shadow: none;
-}
+} */
 
-bird-lower-feet {
+bird-lower-feet-left {
+  background-color: black;
   display: block;
-  position: fixed;
-  top: 345px;
-  left: 154px;
-  height: 10px;
-  width: 70px;
-  border-left: 8px solid black;
-  border-right: 8px solid black;
+  position: absolute;
+  top: 338px;
+  left: 155px;
+  height: 15px;
+  width: 7px;
   display: block;
   box-shadow: none;
   transform: skew(60deg);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+bird-lower-feet-right {
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 339px;
+  left: 237px;
+  height: 15px;
+  width: 7px;
+  display: block;
+  box-shadow: none;
+  transform: skew(60deg);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 shadow-under {
   /* border: 1px solid blue; */
   display: block;
-  position: fixed;
+  position: absolute;
   width: 59px;
-  height: 158px;
+  height: 190px;
   border-radius: 50%;
-  transform: rotate(-82deg);
+  transform: rotate(-66deg);
   background-color: lightgray;
   box-shadow: 0px 0px 20px #d7d7d7;
-  top: 250px;
-  left: 120px;
+  top: 200px;
+  left: 80px;
   z-index: -2;
+}
+
+shadow-feet-right {
+  background-color: lightgrey;
+  box-shadow: 0px 0px 20px #d7d7d7;
+  display: block;
+  position: absolute;
+  top: 120px;
+  height: 55px;
+  width: 4px;
+  display: block;
+  box-shadow: none;
+  z-index: 5;
+  transform: skew(0deg);
+}
+shadow-feet-right {
+  background-color: lightgrey;
+  box-shadow: 0px 0px 20px #d7d7d7;
+  display: block;
+  position: absolute;
+  right: 22px;
+  top: 152px;
+  height: 95px;
+  width: 4px;
+  display: block;
+  box-shadow: none;
+  z-index: 8;
+  transform: skew(0deg);
 }
