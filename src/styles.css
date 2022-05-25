@@ -1,0 +1,214 @@
+#todo {
+  margin-top: 400px;
+}
+body {
+  font-family: sans-serif;
+  width: 400px;
+  height: 400px;
+}
+
+* {
+  /*box-shadow: 5px 5px #f002, -5px -5px #0ff2;*/
+}
+body {
+}
+bird-shape {
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+bird-face {
+  margin-top: 85px;
+  height: 13vh;
+  width: 52%;
+}
+
+bird-face {
+  animation-duration: 12s;
+  animation-name: face;
+  animation-iteration-count: infinite;
+}
+
+@keyframes face {
+  from {
+    margin-left: 39%;
+  }
+  50% {
+    margin-left: 30%;
+  }
+  to {
+    margin-left: 39%;
+  }
+}
+
+bird-eyes {
+  height: 10vw;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+bird-eyes > * {
+  width: 4vw;
+  height: 4vw;
+
+  position: relative;
+  background-color: #333;
+  border-radius: 50%;
+}
+bird-eye-left {
+  display: inline-block;
+}
+bird-eye-right {
+  display: inline-block;
+}
+
+bird-eye-left {
+  animation-duration: 5s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+
+bird-eye-right {
+  animation-duration: 5s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  from {
+    height: 4vw;
+  }
+  74% {
+    height: 4vw;
+  }
+  89% {
+    height: 0.2vw;
+  }
+  to {
+    height: 4vw;
+  }
+}
+bird-chin {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+}
+bird-mouth {
+  /* border: 1px solid red; */
+  background-color: #fb8904;
+  display: block;
+
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 27px;
+  height: 25px;
+  transform: rotate(180deg);
+  /* left: 80px; */
+  z-index: 1;
+}
+
+bird-body {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  background-image: linear-gradient(200deg, #f8f044, #cac441);
+
+  width: 218px;
+  height: 263px;
+  border-radius: 50%;
+}
+
+bird-left-wing {
+  /*border: 1px solid red;*/
+  display: block;
+  position: absolute;
+  width: 54px;
+  height: 158px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    200deg,
+    #f8f04400,
+    #f8f04411,
+    #cac441ff,
+    #cac441ff
+  );
+  top: 75px;
+  left: 0px;
+  border-bottom: 2px solid #cec73a;
+  box-shadow: none;
+}
+
+bird-right-wing {
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 136px;
+  border-radius: 50%;
+  background-color: #cec73a;
+  top: 90px;
+  left: 188px;
+  /* border-bottom: 1px solid black; */
+  box-shadow: none;
+  z-index: -1;
+}
+
+/* bird-feet {
+  display: block;
+  position: absolute;
+  top: 240px;
+  height: 40px;
+  width: 10px;
+  background-color: black;
+  display: block;
+} */
+
+bird-feet {
+  display: block;
+  position: fixed;
+  top: 305px;
+  left: 150px;
+  height: 42px;
+  width: 70px;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  display: block;
+  box-shadow: none;
+}
+
+bird-lower-feet {
+  display: block;
+  position: fixed;
+  top: 345px;
+  left: 154px;
+  height: 10px;
+  width: 70px;
+  border-left: 8px solid black;
+  border-right: 8px solid black;
+  display: block;
+  box-shadow: none;
+  transform: skew(60deg);
+}
+
+shadow-under {
+  /* border: 1px solid blue; */
+  display: block;
+  position: fixed;
+  width: 59px;
+  height: 158px;
+  border-radius: 50%;
+  transform: rotate(-82deg);
+  background-color: lightgray;
+  box-shadow: 0px 0px 20px #d7d7d7;
+  top: 250px;
+  left: 120px;
+  z-index: -2;
+}
